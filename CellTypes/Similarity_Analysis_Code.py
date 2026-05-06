@@ -98,7 +98,7 @@ for sc_id in range(5, 32):  # SC5 → SC31
     # Load gene expression for this SC
     gene_expr_file = os.path.join(input_dir, f'supercluster{sc_id}_Filtered_Gene_Expression.csv')
     if not os.path.exists(gene_expr_file):
-        print(f"⚠️ File missing: {gene_expr_file}, skipping.")
+        print(f"File missing: {gene_expr_file}, skipping.")
         continue
     gene_expression_data = pd.read_csv(gene_expr_file, index_col=0)
     print(f"Gene expression shape for SC{sc_id}: {gene_expression_data.shape}")
@@ -129,4 +129,3 @@ for sc_id in range(5, 32):  # SC5 → SC31
         map_to_atlas_and_save(dm_eigenvectors, atlas_data, atlas_affine,
                               os.path.join(dm_dir, f'Supercluster{sc_id}_{sim_method.capitalize()}_DM_Mapped'))
 
-print("\n✅ Finished processing SC5 → SC31")
