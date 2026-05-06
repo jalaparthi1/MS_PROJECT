@@ -12,7 +12,7 @@ atlas_path = os.path.join(base_dir, "Merged_Atlas.nii.gz")
 
 # ---------------------- SUPERCLUSTER GENE LISTS ----------------------
 supercluster_genes = {
-    # ... keep SC5–SC14 unchanged ...
+    
 
     "supercluster15": [
         "NPY", "CORT", "SST", "NOS1", "TLL2", "CRHBP", "TENT5A", "TACR1", "LHX6", "FBN2",
